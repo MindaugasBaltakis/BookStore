@@ -1,0 +1,37 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+### gauti visas knygas
+
+GET http://localhost:8080/api/books
+Content-Type: application/json
+
+### gauti knyga pagal barkoda
+
+GET http://localhost:8080/api/book/000000000120
+Content-Type: application/json
+
+### ideti nauja knyga
+
+POST http://localhost:8080/api/book
+Content-Type: application/json
+
+{"title": "testas", "author": "testas", "barcode": "120", "quantity": "20", "price": "30"}
+
+### pataisyti knygos duomenis
+
+PUT http://localhost:8080/api/book/120
+Content-Type: application/json
+
+{"title": "update", "author": "update", "barcode": "2", "quantity": "20", "price": "30"}
+
+### gauti kainas
+
+GET http://localhost:8080/api/book/price/000000000125
+Content-Type: application/json
+
+###
